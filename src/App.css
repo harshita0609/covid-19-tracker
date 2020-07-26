@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,75 @@
   to {
     transform: rotate(360deg);
   }
+} */
+*{
+  margin: 0;
+}
+
+.app__header{
+  display: flex;
+  /*flex by default in a row */
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  /* padding adds space inside of a container and margin adds it outside */
+}
+body{
+  /* background-color: #747c9b; */
+  /* background-color: lightgray; */
+  background-color: peachpuff;
+}
+.app__stats{
+  display:flex;
+  justify-content:space-between;
+}
+.app{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+/* //when screen is collapsed the right side comes down */
+@media(max-width:990px){
+  .app{
+    flex-direction: column;
+  }
+}
+/* //till now left and ride side were sharing same portion of screen */
+ /* we want left one to be more prominent */
+ .app__left{
+   flex:0.9;
+ }
+ .MuiOutlinedInput-root {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+.app__dropdown{
+  background-color: white;
+}
+/* .MuiCard-root {
+  overflow: hidden;
+  border: 2px solid black;
+} */
+.app__header >h1{
+  color: black;
+  font-size: 2rem;
+
+}
+.app__right{
+  display: flex;
+  flex-direction: column;
+
+}
+.app__right .MuiCardContent-root{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+}
+.app__graph{
+  flex-grow: 1;
+}
+.app__graphTitle{
+  margin-top: 20px;
 }
